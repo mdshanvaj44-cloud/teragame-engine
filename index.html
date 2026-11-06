@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>TeraGame Engine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="logo">TG</span><div><b>TeraGame Engine</b><small>Browser Game Launcher • Phase 1</small></div></div>
+    <span class="status"><i></i> Local demo</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR GAME SPACE</p>
+      <h1>Play. Build. Launch.</h1>
+      <p class="muted">A lightweight starting point for browser games. Heavy cloud streaming will be added only when a real compute server is available.</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-head"><h2>Game Library</h2><span class="tag">HTML games</span></div>
+      <div class="game-card">
+        <div class="game-icon">🎮</div>
+        <div class="game-info"><b>Neon Runner</b><small>Built-in demo • Runs in your browser</small></div>
+        <button id="playDemo" class="primary">Play</button>
+      </div>
+      <div class="upload">
+        <label for="gameFile" class="upload-label">＋ Choose an HTML game file</label>
+        <input id="gameFile" type="file" accept=".html,.htm,text/html">
+        <small>For this first version, select a single .html game file. ZIP and APK support are not enabled yet.</small>
+      </div>
+      <div class="linkbox">
+        <label for="teraLink">TeraBox shared link (opens separately)</label>
+        <div class="linkrow"><input id="teraLink" type="url" placeholder="Paste a TeraBox share link"><button id="openTera" class="secondary">Open</button></div>
+        <small>TeraBox stores files; it does not execute games or provide a gaming CPU/GPU.</small>
+      </div>
+    </section>
+
+    <section class="panel player-panel">
+      <div class="section-head"><h2>Game Screen</h2><button id="stopGame" class="quiet">Stop</button></div>
+      <div id="stage" class="stage">
+        <div id="empty" class="empty"><span>🕹️</span><b>Your game will appear here</b><small>Tap Play to start the demo.</small></div>
+        <canvas id="game" width="800" height="450" hidden></canvas>
+        <iframe id="externalGame" title="Uploaded HTML game" hidden sandbox="allow-scripts allow-forms allow-pointer-lock"></iframe>
+      </div>
+      <div class="controls"><button id="left">◀</button><button id="jump">JUMP</button><button id="right">▶</button></div>
+      <small class="hint">Demo controls: keyboard arrows / A-D and Space, or the touch buttons.</small>
+    </section>
+
+    <section class="notice">
+      <b>Important compatibility note</b>
+      <p>HTML games can run in a browser. Android APK files need Android itself or an Android emulator. Large PC games need a real remote PC/GPU and live streaming; changing a file extension or putting a game in TeraBox cannot provide that.</p>
+    </section>
+  </main>
+  <footer> TeraGame Engine • Open prototype • No paid services connected </footer>
+  <script src="app.js"></script>
+</body>
+</html>
