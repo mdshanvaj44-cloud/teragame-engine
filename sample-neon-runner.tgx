@@ -1,0 +1,42 @@
+{
+  "format": "TERAGAME-TGX",
+  "formatVersion": "5.2",
+  "package": {
+    "id": "sample-neon-runner",
+    "createdAt": "2026-11-07T00:00:00.000Z",
+    "schema": "tgx-manifest-v1"
+  },
+  "game": {
+    "title": "Neon Runner Sample",
+    "version": "1.0.0",
+    "platform": "Browser",
+    "description": "Example manifest for a browser game.",
+    "icon": "🏎️"
+  },
+  "content": {
+    "files": [
+      {
+        "name": "index.html",
+        "size": 0,
+        "mime": "text/html"
+      }
+    ],
+    "sourceUrl": null,
+    "storageProvider": "user-managed",
+    "storageReference": null
+  },
+  "runtime": {
+    "kind": "browser",
+    "entryPoint": "index.html",
+    "requirements": [
+      "Compatible browser HTML/JS assets"
+    ]
+  },
+  "integrity": {
+    "algorithm": "none",
+    "note": "Example only."
+  },
+  "notes": [
+    "TGX is a manifest, not an emulator or binary converter."
+  ]
+}
